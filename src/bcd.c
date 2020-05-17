@@ -158,7 +158,6 @@ __asm
             inc     HL
             ld      D, (HL)         ; DE: bcd
             inc     HL
-            ld      B, #0
             ld      C, (HL)         ; C: digit offset
             inc     HL
             ld      A, (HL+)

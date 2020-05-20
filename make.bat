@@ -1,11 +1,11 @@
-@echo off
+@rem @echo off
 @set PROJ=bcd_test
 @set GBDK=..\..\gbdk\
 @set GBDKLIB=%GBDK%lib\small\asxxxx\
 @set OBJ=build\
 @set SRC=src\
 
-@set CFLAGS=-mgbz80 --no-std-crt0 -Dnonbanked= -I %GBDK%include -I %GBDK%include\asm -I %SRC%include -c
+@set CFLAGS=-mgbz80 --no-std-crt0 -I %GBDK%include -I %GBDK%include\asm -I %SRC%include -c
 
 @set LFLAGS=-n -- -z -m -j -k%GBDKLIB%gbz80\ -lgbz80.lib -k%GBDKLIB%gb\ -lgb.lib 
 @rem @set LFLAGS=%LFLAGS% -yt2 -yo4 -ya4

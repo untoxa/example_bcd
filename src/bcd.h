@@ -4,10 +4,10 @@
 #include <asm/types.h>
 
 // macro for creating BCD constants
-#define BCD_HEX(v) {(BYTE)(v), (BYTE)((v) >> 8), (BYTE)((v) >> 16), (BYTE)((v) >> 24)}
+#define BCD_HEX(v) ((BCD)(v))
 #define MAKE_BCD(v) BCD_HEX(0x ## v)
 
-typedef UBYTE BCD[4];
+typedef unsigned long BCD;
 
 // adding BCD numbers: sour += value
 void bcd_add(BCD * sour, const BCD * value);

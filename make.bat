@@ -1,4 +1,4 @@
-@rem @echo off
+@echo off
 @set PROJ=bcd_test
 @set GBDK=..\..\gbdk\
 @set GBDKLIB=%GBDK%lib\small\asxxxx\

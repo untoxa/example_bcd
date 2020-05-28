@@ -168,58 +168,57 @@ __asm
             inc     DE
             inc     DE
 
-            ld      A, (DE)
-            dec     DE
-            ld      B, A
-            swap    A
-            and     #0x0f
-            add     C
-            ld      (HL+), A
-            ld      A, B
-            and     #0x0f
-            add     C
-            ld      (HL+), A
-            
-            ld      A, (DE)
-            dec     DE
-            ld      B, A
-            swap    A
-            and     #0x0f
-            add     C
-            ld      (HL+), A
-            ld      A, B
-            and     #0x0f
-            add     C
-            ld      (HL+), A
+            ld      B, #0x0f
 
             ld      A, (DE)
-            dec     DE
-            ld      B, A
             swap    A
-            and     #0x0f
+            and     B
             add     C
             ld      (HL+), A
-            ld      A, B
-            and     #0x0f
+            ld      A, (DE)
+            and     B
             add     C
             ld      (HL+), A
+            dec     DE
             
             ld      A, (DE)
-            dec     DE
-            ld      B, A
             swap    A
-            and     #0x0f
+            and     B
             add     C
             ld      (HL+), A
-            ld      A, B
-            and     #0x0f
+            ld      A, (DE)
+            and     B
             add     C
             ld      (HL+), A
+            dec     DE
+
+            ld      A, (DE)
+            swap    A
+            and     B
+            add     C
+            ld      (HL+), A
+            ld      A, (DE)
+            and     B
+            add     C
+            ld      (HL+), A
+            dec     DE
+            
+            ld      A, (DE)
+            swap    A
+            and     B
+            add     C
+            ld      (HL+), A
+            ld      A, (DE)
+            and     B
+            add     C
+            ld      (HL+), A
+            dec     DE
             
             xor     A
             ld      (HL+), A
             
-            ld      DE, #0x0008
+            ld      D, A
+            ld      E, #0x08
             
             pop     BC
             ret

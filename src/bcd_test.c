@@ -39,4 +39,11 @@ void main() {
     len = bcd2text(&bcd, 0x11, buf);
     BGB_PROFILE_END(bcd2text());
     set_bkg_tiles(5, 7, len, 1, buf);
+
+    BGB_PROFILE_BEGIN();
+    uint2bcd(54321, &bcd);
+    BGB_PROFILE_END(uint2bcd());
+    len = bcd2text(&bcd, 0x11, buf);
+    set_bkg_tiles(5, 8, len, 1, buf);
+
 }
